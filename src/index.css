@@ -900,6 +900,7 @@ body {
 }
 .welcome {
   font-size: 1rem;
+  font-family: "Quicksand";
   margin-left: 20%;
   display: flex;
   justify-content: center;
