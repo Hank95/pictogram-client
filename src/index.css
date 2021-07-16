@@ -326,6 +326,16 @@ body {
   align-items: center;
   text-align: center;
 }
+
+#sketchContainer {
+  right: 150px;
+  width: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .myPic {
   margin-top: 10px;
   align-items: center;
