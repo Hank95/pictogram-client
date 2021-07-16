@@ -111,7 +111,7 @@ const SketchPad = ({ handleSave }) => {
   return (
     <div className="sketch">
       <StyleBar handleData={handleData} formData={formData} />
-      <div className="feedList">
+      <div id="sketchContainer">
         <canvas
           className="canvas"
           onMouseDown={startDrawing}

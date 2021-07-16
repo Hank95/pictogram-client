@@ -613,6 +613,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .navButtons {
+  /* border: solid black 2px;
+  border-radius: 50px; */
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -661,6 +663,7 @@ body {
   z-index: 1000;
   margin-top: 10vh;
   height: 100%;
+  width: 15%;
   background: linear-gradient(
     200deg,
     #f17c58,
@@ -809,8 +812,34 @@ body {
   background-color: transparent;
   border-radius: 25px;
   border: solid, 3px;
-  color: rgb(252, 252, 130);
+  color: rgb(0, 0, 0);
   font-family: "Quicksand";
+}
+
+.ui.button.discard {
+  background-color: transparent;
+  right: 150px;
+  width: auto;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  border-radius: 20px;
+  border: solid;
+  font-family: "Quicksand";
+}
+.ui.button.discard:hover {
+  align-items: center;
+  text-align: center;
+  background-image: url("../src/paintspray.gif");
+  background-image: rotate(270deg);
+  background-position: center;
+  background-repeat: repeat;
+  color: rgb(252, 252, 130);
 }
 .inputField {
   border-radius: 5px;
@@ -876,4 +905,13 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+#sketchContainer {
+  right: 150px;
+  width: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

@@ -11,13 +11,13 @@ const NavBar = ({ user }) => {
       </Link>
       <div className="welcome">Welcome {user}</div>
       <nav className="navButtons">
-        <NavLink className="button1" to="/">
+        <NavLink className="homeBtn" to="/">
           Home
         </NavLink>
-        <NavLink className="button2" to="/sketch-pad">
+        <NavLink className="sketchPadBtn" to="/sketch-pad">
           Sketch Pad
         </NavLink>
-        <NavLink className="button3" to="/my-sketchs">
+        <NavLink className="mySketchesBtn" to="/my-sketchs">
           My Sketches
         </NavLink>
       </nav>
