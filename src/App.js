@@ -12,11 +12,9 @@ function App() {
   const [user, setUser] = useState("");
 
   useState(() => {
-    Axios.get("https://git.heroku.com/pictogram-db.git/api/get").then(
-      (response) => {
-        setFeed(response.data);
-      }
-    );
+    Axios.get("https://pictogram-db.herokuapp.com/api/get").then((response) => {
+      setFeed(response.data);
+    });
   }, []);
 
   // const { isLoading } = useAuth0();
@@ -32,14 +30,14 @@ function App() {
     }
     const curDate = new Date().toLocaleDateString();
     const pic = e.target.parentElement.previousSibling.toDataURL();
-    Axios.post("https://git.heroku.com/pictogram-db.git/api/insert", {
+    Axios.post("https://pictogram-db.herokuapp.com/api/insert", {
       title: title,
       author: user,
       image: pic,
       datePosted: curDate,
     }).then((res) => {
       console.log(res);
-      Axios.get("https://git.heroku.com/pictogram-db.git/api/get").then(
+      Axios.get("https://pictogram-db.herokuapp.com/api/get").then(
         (response) => {
           setFeed(response.data);
         }
@@ -49,7 +47,7 @@ function App() {
 
   const handleDelete = (id) => {
     console.log(id);
-    Axios.delete(`https://git.heroku.com/pictogram-db.git/delete/${id}`).then(
+    Axios.delete(`https://pictogram-db.herokuapp.com/delete/${id}`).then(
       (response) => {
         setFeed(
           feed.filter((val) => {
