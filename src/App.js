@@ -17,10 +17,6 @@ function App() {
     });
   }, []);
 
-  // const { isLoading } = useAuth0();
-  // if (isLoading) {
-  //   return <Loading />;
-  // }
   const handleSave = (e, title) => {
     if (
       e.target.parentElement.previousSibling.toDataURL() ===
@@ -57,6 +53,27 @@ function App() {
       }
     );
   };
+  // const handleLikeUpdate = (count, id) => {
+  //   Axios.put("https://pictogram-db.herokuapp.com/update", {
+  //     likeCount: count,
+  //     iduser_posts: id,
+  //   }).then((response) => {
+  //     console.log(response);
+  //     setFeed(
+  //       feed.map((val) => {
+  //         return val.id === id
+  //           ? {
+  //               iduser_posts: val.iduser_posts,
+  //               title: val.title,
+  //               author: val.author,
+  //               image: val.image,
+  //               likeCount: count + 1,
+  //             }
+  //           : val;
+  //       })
+  //     );
+  //   });
+  // };
 
   const nameGrabber = (nameInput) => {
     setUser(nameInput);
@@ -122,7 +139,7 @@ function App() {
             alignItems: "center",
             height: "100vh",
           }}
-          component={() => <Home feed={feed} />}
+          component={() => <Home feed={feed} handleLikeUpdate={null} />}
         />
       </Switch>
     </div>

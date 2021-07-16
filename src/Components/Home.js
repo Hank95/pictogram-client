@@ -1,10 +1,16 @@
 import PictureCard from "./PictureCard";
 
-const Home = ({ feed }) => {
+const Home = ({ feed, handleLikeUpdate }) => {
   return (
     <div className="feedList" id="feedList">
       {feed.map((post) => {
-        return <PictureCard post={post} />;
+        return (
+          <PictureCard
+            key={post.iduser_posts}
+            post={post}
+            handleLikeUpdate={handleLikeUpdate}
+          />
+        );
       })}
     </div>
   );
