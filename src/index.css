@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: "Quicksand";
   font-weight: bold;
@@ -382,6 +382,403 @@ body {
 .ui.cards > .card {
   border-radius: 20px;
   background-color: goldenrod;
+  color: rgb(0, 0, 0);
+}
+.ui.card > .content > .header:hover,
+.ui.cards > .card > .content > .header:hover,
+.ui.card .meta:hover,
+.ui.cards > .card .meta:hover,
+.ui.card > .content > .description:hover,
+.ui.cards > .card > .content > .description,
+.ui.card > .likeButton,
+.ui.cards > .card > .likeButton:hover {
+  border-radius: 20px;
+  z-index: 1000;
+  background-image: url("../src/paintspray.gif");
+  background-repeat: repeat;
+  overflow: hidden;
+  border-radius: 5px;
+  border: solid, 3px;
+  color: rgb(252, 252, 130);
+  font-family: "Quicksand";
+}
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header,
+.ui.card .meta,
+.ui.cards > .card .meta,
+.ui.card > .content > .description,
+.ui.cards > .card > .content > .description > .ui.card > .likeButton,
+.ui.cards > .card > .content > .description > .likeButton {
+  background-color: transparent;
+  border-radius: 25px;
+  border: solid, 3px;
+  color: rgb(252, 252, 130);
+  font-family: "Quicksand";
+}
+.inputField {
+  border-radius: 5px;
+  border: solid, 3px;
+  background-color: transparent;
+}
+.inputField.placeholder {
+  color: rgb(10, 10, 10);
+}
+.inputField:hover {
+  background-image: url("../src/paintspray.gif");
+  background-image: rotate(270deg);
+  background-repeat: repeat;
+  color: rgb(252, 252, 130);
+}
+.title {
+  font-size: 20px;
+  text-emphasis: bold;
+}
+.title:hover {
+  background-image: url("../src/paintspray.gif");
+  background-image: rotate(270deg);
+  background-repeat: repeat;
+  color: rgb(252, 252, 130);
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    40deg,
+    #f17c58,
+    #e94584,
+    #985eb9,
+    #24aadb,
+    #27dbb1,
+    #ffdc18,
+    #b4c00c,
+    #ff3706
+  );
+  background-size: 1000% 100%;
+  animation: gradient 20s linear infinite;
+  animation-direction: alternate;
+  background-repeat: repeat;
+  overflow-y: scroll;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(../src/Quicksand/static/Quicksand-Medium.ttf);
+}
+.welcome {
+  font-size: 1rem;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+} */
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: bold;
+}
+body {
+  margin-top: 30px;
+  background-color: white;
+  min-height: 100vh;
+  margin: 0;
+  font-weight: 300;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+canvas {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  text-align: center;
+}
+h4 {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  user-select: none;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.Appz {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  top: 0;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+}
+.Appz:hover {
+  border-radius: 15px;
+  background-image: url("../src/paintspray.gif");
+  background-image: rotate(270deg);
+  background-repeat: repeat;
+  color: rgb(252, 252, 130);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  top: 0;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+}
+.mySketches {
+  font-family: "Quicksand";
+}
+.navBar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    40deg,
+    #f17c58,
+    #e94584,
+    #985eb9,
+    #24aadb,
+    #27dbb1,
+    #ffdc18,
+    #b4c00c,
+    #ff3706
+  );
+  background-size: 1000% 100%;
+  animation: gradient 20s linear infinite;
+  animation-direction: alternate;
+  background-repeat: repeat;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: right;
+  padding-right: 10px;
+  border-bottom: solid;
+  float: inline-start;
+  flex-flow: row nowrap;
+  z-index: 1000;
+}
+#home {
+  align-items: center;
+  text-align: center;
+}
+#logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  align-self: center;
+  color: rgb(46, 46, 46);
+  font-size: 1.7rem;
+  font-family: "Quicksand";
+}
+#logo:hover {
+  background-image: url("../src/paintspray.gif");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Quicksand";
+  -webkit-font-smoothing: antialiased;
+}
+.camera:hover {
+  background-image: url("../src/paintspray.gif");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+.navButtons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.homeBtn,
+.sketchPadBtn,
+.mySketchesBtn {
+  border: solid black 2px;
+  border-radius: 50px;
+  padding: 1rem;
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+}
+.homeBtn:hover,
+.sketchPadBtn:hover,
+.mySketchesBtn:hover {
+  background-image: url("../src/paintspray.gif");
+  background-image: rotate(180deg);
+  background-position: center;
+  background-repeat: none;
+  color: rgb(252, 252, 130);
+}
+.saveBtn,
+.clearBtn,
+.undoBtn {
+  border-radius: 20px;
+  border: solid, 3px;
+  background-color: transparent;
+  margin: 1px;
+  font-family: "Quicksand";
+}
+.saveBtn:hover,
+.clearBtn:hover,
+.undoBtn:hover {
+  background-image: url("../src/paintspray.gif");
+  background-image: rotate(270deg);
+  background-repeat: repeat;
+  color: rgb(252, 252, 130);
+  font-family: "Quicksand";
+}
+.sidebar {
+  scroll-behavior: none;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 1000;
+  margin-top: 10vh;
+  height: 100%;
+  background: linear-gradient(
+    200deg,
+    #f17c58,
+    #e94584,
+    #985eb9,
+    #24aadb,
+    #27dbb1,
+    #ffdc18,
+    #b4c00c,
+    #ff3706
+  );
+  background-size: 1000% 100%;
+  animation: gradient 10s linear infinite;
+  animation-direction: alternate;
+  background-repeat: repeat;
+  overflow: hidden;
+  border-radius: right 5px;
+  border-right: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  margin-top: 10%;
+}
+.sidebar ul li {
+  padding: 5px 0;
+  padding-bottom: 10px;
+}
+.sidebar input,
+.sidebar button {
+  text-align: center;
+  width: 45px;
+}
+.sidebar li:last-of-type {
+  margin-top: auto;
+}
+.sidebar li:hover {
+  background: url("../src/paint1.gif") right bottom no-repeat,
+    url("../src/paint2.gif") top repeat;
+  -webkit-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.7);
+  color: rgb(252, 252, 130);
+  border-radius: 15px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.sidebar button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+}
+.sidebar label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.sketch {
+  align-items: center;
+  text-align: center;
+}
+.myPic {
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+.myPic img {
+  border: solid rgb(10, 10, 10) 2px;
+}
+.actualPic {
+  background-color: white;
+  margin-top: 120px;
+}
+.myPicList {
+  right: 150px;
+  width: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  margin-top: 120px;
+  padding-bottom: 80px;
+  font-family: "Quicksand";
+}
+.feedList {
+  right: 150px;
+  width: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  margin-top: 120px;
+  padding-bottom: 80px;
+}
+.Card {
+  text-align: center;
+  font-weight: bold;
+}
+.ui.card,
+.ui.cards > .card {
+  border-radius: 20px;
+  background-color: white;
   color: rgb(0, 0, 0);
 }
 .ui.card > .content > .header:hover,
